@@ -1,0 +1,361 @@
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-width: 0; 
+    background-color: #001845;
+}
+html {
+    scroll-behavior:smooth;
+}
+
+#nav {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color:#001845;
+  position: fixed;
+  z-index: 1030;
+  overflow: visible;
+  font-weight: 700;
+}
+
+#nav-links {
+  display: flex;
+  height: 7vh;
+  width: 20rem;
+  justify-content:space-evenly;
+  align-items: center;
+  font-size: 0.8rem;
+  gap: 0.1rem;
+  list-style: none;
+  padding: 0.7 0.7 0.7 0.7rem;
+}
+
+#nav-links a {
+  color: #90e0ef;
+  height: 1rem;
+  width: 5rem;
+  display:flex;
+  justify-content:space-evenly;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+#nav-links a:hover {
+  transform: scale(1.1) translateY(-3px);
+}
+
+#social-icons {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  font-size: 1rem;
+  padding: 0.3rem;
+}
+
+#social-icons a {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  text-decoration: none;
+  color: #90e0ef;
+  font-size: 1.2rem;
+  padding: 0 0.6rem;
+  transition: transform 0.3s ease;
+}
+
+#social-icons a:hover {
+  transform: scale(1.1) translateY(-3px);
+}
+
+#home-1 {
+  background-color: #001845;
+  min-height: 50vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* CENTER children horizontally */
+  justify-content: start;  /* Stack from top */
+  padding-top: 12vh;
+  text-align: center;
+}
+
+.logo {
+  height: 40vh;
+  width: 40vh;
+  border-radius: 50%;
+  background-image: url("twisis logo.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.credits-wrapper {
+    width: 100%;
+    height: 50px;          /* only one line visible */
+    overflow: hidden;
+}
+
+.credits-roll {
+    display: flex;
+    flex-direction: column;
+    animation: scrollUp 8s linear infinite; 
+}
+
+.credits-roll p {
+    height: 50px;
+    line-height: 50px;
+    font-size: 22px;
+    text-align: center;
+    color: #90e0ef;
+    font-weight: 500;
+}
+
+/* SCROLL ANIMATION */
+@keyframes scrollUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-250px); /* 5 lines × 50px */
+    }
+}
+
+
+
+#title {
+  color:#adf7b6;
+  background-color: #001845;
+  font-weight:600;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-left: 1.5rem;
+  height: 9vh;
+}
+
+#about-1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color:#adf7b6;
+  background-color: #001845;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 2rem;
+  padding-top: 2.5rem;
+}
+.text {
+  font-size: 1rem;
+  color:#90e0ef;
+  background-color: #001845;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+}
+#expertise {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color:#adf7b6;
+  background-color: #001845;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 0.8rem;
+}
+#services {
+  padding: 1vh 5vw;
+  background-color: #001845;
+  color: #90e0ef;
+  text-align: left;
+  overflow: hidden;
+}
+#heading {
+  background-color: #003566;
+  color:#adf7b6;
+}
+.services-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #001845;
+  padding: 1.5rem;
+  gap: 1.5rem;
+}
+
+/* Card Styles */
+.service-card {
+  width: 280px;
+  background-color: #003566;
+  padding: 1.8rem;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card li {
+  background-color: #003566;
+}
+.service-card ul {
+  background-color: #003566;
+}
+.service-name li {
+  background-color:#003566;
+}
+
+#pricing-section {
+  padding-left: 2rem;
+  text-align: left;
+  background-color: #001845;
+}
+
+.pricing-title {
+  font-size: 1.5rem;
+  background-color: #001845;
+  padding: 2rem;
+  color: #adf7b6;
+  font-weight: 500;
+}
+.slider {
+  background-color: #001845;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  gap: 1rem;
+  display: flex;
+  overflow-x: auto;           /* enables horizontal scroll */
+  scroll-snap-type: x mandatory; /* snaps slides perfectly */
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on phones */
+  scroll-padding-left: 2rem; /* pushes scrolling start point */
+  overflow-x: auto;
+}
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slide {
+  white-space: normal;       /* allows text to wrap */
+  word-wrap: break-word;     /* breaks long words if needed */
+  overflow-wrap: break-word; /* modern alternative */
+  max-width: 50vw;            /* width of each slide */
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  background-color: #003566;
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.slide:hover {
+  transform: scale(1.03);
+} 
+
+/* Hover effect: scale + shadow */
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Text inside card */
+.service-name {
+  background-color: #003566;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #90e0ef;
+  padding-bottom: 0.7rem;
+}
+
+.service-fee {
+  background-color: #003566;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #a7c957;
+}
+
+#projects {
+  text-align: left;
+  padding: 2rem 2rem;
+  background-color: #001845;
+}
+
+.project-title {
+  padding: 2rem 0.5rem;
+  color: #adf7b6;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.project-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  scroll-behavior: smooth;
+}
+
+.project-slider::-webkit-scrollbar {
+  display: none; /* hide scroll bar */
+}
+
+.project-slide {
+  min-width: 50vh;
+  background: #003566;
+  color: #90e0ef;
+  padding: 2rem;
+  border-radius: 1rem;
+  scroll-snap-align: start;
+  text-align: left;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+
+  /* text wrap */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.project-slide h3 {
+  background-color: #003566;
+  font-size: 1.2rem;
+  color:#adf7b6;
+  padding-bottom: 0.5rem;
+}
+
+.project-slide p {
+  background-color: #003566;
+  font-size: 1.1rem;
+}
+/* Hover effect: scale + shadow */
+.project-slide:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
+}
+
+
+footer {
+  background-color: #001845;
+}
+
+#end {
+  color:#adf7b6;
+  font-weight: 600;
+  min-width: 40vh;
+  font-size: 1.2rem;
+  background-color: #001845;
+  word-wrap: break-word;
+  padding: 2rem;
+}
+
+.last {
+  background-color: #001845;
+  color: #90e0ef;
+  padding: 2rem;
+  text-align: center;
+}
