@@ -280,12 +280,12 @@ html {
 
 #projects {
   text-align: left;
-  padding: 2rem 2rem;
+  padding: 2.5rem 0;
   background-color: #001845;
 }
 
 .project-title {
-  padding: 2rem 0.5rem;
+  padding: 2rem 2rem;
   color: #adf7b6;
   font-size: 1.5rem;
   font-weight: 500;
@@ -311,8 +311,9 @@ html {
   color: #90e0ef;
   padding: 2rem;
   border-radius: 1rem;
-  scroll-snap-align: start;
-  text-align: left;
+  scroll-snap-type: x mandatory; /* snaps slides perfectly */
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on phones */
+  scroll-padding-left: 2rem;
   transition: transform 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 
